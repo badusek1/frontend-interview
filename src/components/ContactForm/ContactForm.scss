@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.contact-form {
+    width: 373px;
+    max-width: 100%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    margin-bottom: 73px;
+    input, textarea, select {
+        border: none;
+        outline: none;
+        display: block;
+        border-bottom: 2px solid $colorPrimary;
+        @include placeholder($colorPrimaryDark);
+        background-color: transparent;
+        width: 100%;
+        padding: 15px 0px;
+        margin-bottom: 20px;
+        &[type="checkbox"] {
+            width: auto;
+        }
+    }
+    .check-wrap {
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        .checkbox {
+            width: 24px;
+            height: 20px;
+            border: 1px solid $colorPrimaryDark;
+            border-radius: 2px;
+            margin-top: 1px;
+            margin-right: 15px;
+            z-index: 1;
+            background-color: $colorPrimaryWhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &.false {
+                img {
+                    display: none;
+                }
+            }
+        }
+        input {
+            position: absolute;
+            z-index: -10;
+            width: auto;
+            margin-top: 4px;
+            margin-right: 15px;
+            border: none;
+            visibility: hidden;
+        }
+    }
+    button {
+        background-color: $colorAccent;
+        color: $colorPrimaryWhite;
+        border: none;
+        outline: none;
+        padding: 20px 24px;
+        width: 240px;
+        text-align: left;
+        &:hover, &:active, &:focus {
+            background-color: rgba($colorAccent, 0.8);
+            border: none;
+            outline: none;
+        }
+        img {
+            float: right;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .contact-form {
+        width: 100%;
+        button {
+            width: 100%;
+        }
+        .check-wrap {
+            font-size: 12px;
+            line-height: 16px;
+            .checkbox {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

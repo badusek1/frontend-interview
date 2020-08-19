@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.info-card {
+    font-size: 15px;
+    line-height: 22px;
+    border-right: 1px solid $colorSecondary;
+    &:last-child {
+        border-right: none;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        text-align: left;
+        width: 155px;
+        max-width: 100%;
+        li {
+            margin-bottom: 16px;
+        }
+    }
+
+    a {
+        font-weight: bold;
+        img {
+            margin-right: 15px;
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .info-card {
+        border-right: none;
+        border-bottom: 1px solid $colorSecondary;
+        padding: 30px 0;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+}

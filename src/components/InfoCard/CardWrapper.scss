@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.card-wrapper {
+
+    border: 1px solid $colorSecondary;
+    padding: 39.76px 54px;
+
+}
+
+@media (max-width: 991px) {
+    .card-wrapper {
+        padding: 0 10px;
+        margin: 0 !important;
+    }
+}
